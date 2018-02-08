@@ -1,0 +1,31 @@
+31.10.2017
+* Release 2.2.1
+* umdk-ibutton module simplified
+* access control system functionality moved from umdk-ibutton to umdk-pacs
+* umdk-m200 and umdk-m230 unified MQTT messages, see https://www.unwds.com/docs/riot/umdk-m200/ and https://www.unwds.com/docs/riot/umdk-m230/ for reference
+* umdk-hd44780 module added
+
+28.09.2017
+* Release 2.2.0
+* MQTT commands to alter gate module settings
+
+17.09.2017
+* Release 2.1.2
+* UMDK-M200 and UMDK-M230 improvements
+
+11.07.2017
+* Release 2.1.1
+* Support for setting TX delay in config file
+
+18.04.2017
+
+* Release 1.9.3
+* MH-Z19 module added
+
+17.04.2017
+
+* commercial version of umdk-counter moved to umdk-pulse
+
+16.04.2017
+
+* added support for counter module commands

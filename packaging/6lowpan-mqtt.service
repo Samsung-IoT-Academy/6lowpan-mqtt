@@ -1,0 +1,17 @@
+[Unit]
+Description=6lowpan-MQTT translator daemon
+ConditionPathExists=/etc/6lowpan-mqtt/mqtt.conf
+After=network.target mosquitto.service
+Requires=network.target mosquitto.service dev-ttySAC1.device
+
+[Service]
+# Type=forking
+RemainAfterExit=no
+StartLimitInterval=0
+User=root
+PIDFile=/var/run/6lowpan-mqtt.pid
+ExecStart=/usr/bin/6lowpan-mqtt -d
+ExecStop=/bin/kill -TERM $MAINPID
+
+[Install]
+WantedBy=multi-user.target
