@@ -9,7 +9,7 @@ Requires=network.target mosquitto.service dev-ttySAC1.device
 RemainAfterExit=no
 StartLimitInterval=0
 User=root
-PIDFile=/var/run/6lowpan-mqtt.pid
+PIDFile=/var/run/mqtt.pid
 ExecStart=/usr/bin/6lowpan-mqtt -d
 ExecStop=/bin/kill -TERM $MAINPID
 
