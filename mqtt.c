@@ -593,7 +593,13 @@ int main(int argc, char *argv[])
             exit(EXIT_FAILURE);
         }
         snprintf(pidval, sizeof(pidval), "%d\n", getpid());
-        write(pidfile, pidval, strlen(pidval));
+
+        if (write(pidfile, pidval, strlen(pidval)) < 0)
+        {
+            snprintf(logbuf, sizeof(logbuf), "Cannot write to the pid file! Exit\n");
+            logprint(logbuf);
+            exit(EXIT_FAILURE);
+        }
         
         sleep(30);
     }
